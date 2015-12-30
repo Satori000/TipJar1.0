@@ -4,7 +4,7 @@ TipJar is a tip calculator application for iOS.
 
 Submitted by: Shakeeb Majid
 
-Time spent: 3 hours spent in total
+Time spent: 5 hours spent in total
 
 ## User Stories
 
@@ -12,7 +12,7 @@ The following **required** functionality is complete:
 * [✓] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [] Settings page to change the default tip percentage.
+* [✓] Settings page to change the default tip percentage.
 * [ ] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
@@ -26,13 +26,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/y29Ofgx.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/y29Ofgx' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Learned a lot about iOS development, had to work out the bug relating to the outdated Objective-C conversion also the views would not be placed proportionally in the simulator as it was placed in the view controller in the storyboard during development. Other than that it was smooth sailing, very clear tutorial! (Will likely release a better submission soon)
+While trying to create the default settings percentages I had to make sure that the default would not reset the currently selected percentage when the default hasn't been changed and last in between individual app openings. Also had to work out the bug relating to the outdated Objective-C conversion also the views would not be placed proportionally in the simulator as it was placed in the view controller in the storyboard during development. Other than that it was smooth sailing, very clear tutorial! (Will likely release a better submission soon)
 
 ## License
 
