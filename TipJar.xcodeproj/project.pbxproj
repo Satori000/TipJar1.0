@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F00AB311C33AF1500CAE398 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		1F00AB311C33AF1500CAE398 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
 		1F0199761C31D08100EB0F40 /* TipJar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipJar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F01997A1C31D08100EB0F40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F01997B1C31D08100EB0F40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +61,6 @@
 		1F01996D1C31D08100EB0F40 = {
 			isa = PBXGroup;
 			children = (
-				1F00AB311C33AF1500CAE398 /* SettingsViewController.swift */,
 				1F0199781C31D08100EB0F40 /* TipJar */,
 				1F01998E1C31D08200EB0F40 /* TipJarTests */,
 				1F0199771C31D08100EB0F40 /* Products */,
@@ -82,6 +81,7 @@
 			children = (
 				1F01997B1C31D08100EB0F40 /* AppDelegate.swift */,
 				1F01997D1C31D08100EB0F40 /* ViewController.swift */,
+				1F00AB311C33AF1500CAE398 /* SettingsViewController.swift */,
 				1F01997F1C31D08100EB0F40 /* Main.storyboard */,
 				1F0199821C31D08100EB0F40 /* Images.xcassets */,
 				1F0199841C31D08100EB0F40 /* LaunchScreen.xib */,
