@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    
+    var dateComponents = NSDateComponents()
     
     
     
@@ -57,8 +57,26 @@ class ViewController: UIViewController {
             
         }
         
+        let dissappeared = defaults.boolForKey("disappeared")
         
-
+        if(dissappeared){
+            let defaults = NSUserDefaults.standardUserDefaults()
+            let oldDate = defaults.objectForKey("oldDate") as! NSDate
+            let savedBill = defaults.stringForKey("savedBill")
+            billField.text = savedBill
+            var date = NSDate().timeIntervalSinceDate(oldDate)
+            
+            //println("\(date)")
+            //println(dateComponents.second)
+            //billField.text = "\(date)"
+            
+            if(date > 6000){
+                billField.text = nil
+            }
+            
+            
+        }
+        
         
     }
 
@@ -106,6 +124,7 @@ class ViewController: UIViewController {
             
         }
         
+        
 
     }
     
@@ -126,7 +145,23 @@ class ViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
+        
+        
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        print("View did disappear")
+        let date = defaults.setObject(NSDate(), forKey: "oldDate")
+        
+        defaults.setBool(true, forKey: "disappeared")
+        var savedBill = billField.text
+        
+        defaults.setObject(savedBill, forKey: "savedBill")
+        
+    }
+    
     
     
     /*@IBAction func onTap(sender: AnyObject) {
