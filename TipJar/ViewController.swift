@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
-        
+        billField.becomeFirstResponder()
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipValue = defaults.doubleForKey("default_tip_percentage")
         
@@ -129,9 +129,9 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func onTap(sender: AnyObject) {
+    /*@IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
-    }
+    }*/
 
 
 }
