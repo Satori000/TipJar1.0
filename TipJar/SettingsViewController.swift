@@ -42,6 +42,9 @@ class SettingsViewController: UIViewController {
         
     }
     
+    
+    
+    
 
     @IBAction func defaultControl(sender: AnyObject) {
         var tipPercentages = [0.18, 0.20, 0.22]

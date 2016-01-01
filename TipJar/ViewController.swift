@@ -76,8 +76,6 @@ class ViewController: UIViewController {
             
             
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,12 +97,22 @@ class ViewController: UIViewController {
             var tip = billAmount * tipValue
             var total = billAmount + tip
             
+            let anyLocale = NSLocale.currentLocale()
             
+            var theCurrencySymbol : String = anyLocale.objectForKey(NSLocaleCurrencySymbol) as! String
             
-            tipLabel.text = "$\(tip)"
-            totalLabel.text = "$\(total)"
-            tipLabel.text = String(format: "$%.2f", tip)
-            totalLabel.text = String(format: "$%.2f", total)
+            var formatter = NSNumberFormatter()
+            
+            formatter.numberStyle = .CurrencyStyle
+            formatter.locale = anyLocale
+            
+           
+            tipLabel.text = formatter.stringFromNumber(tip)
+            totalLabel.text = formatter.stringFromNumber(total)
+            //tipLabel.text = "$\(tip)"
+            //totalLabel.text = "$\(total)"
+            /*tipLabel.text = "\(theCurrencySymbol)" + String(format: "%.2f", tip)
+            totalLabel.text = "\(theCurrencySymbol)" + String(format: "%.2f", total) */
             
             
             if(tipValue == 0.18){
@@ -140,13 +148,32 @@ class ViewController: UIViewController {
         var tip = billAmount * tipPercentage
         var total = billAmount + tip
         
-        tipLabel.text = "$\(tip)"
-        totalLabel.text = "$\(total)"
-        tipLabel.text = String(format: "$%.2f", tip)
-        totalLabel.text = String(format: "$%.2f", total)
+        let anyLocale = NSLocale.currentLocale()
+        
+        var theCurrencySymbol : String = anyLocale.objectForKey(NSLocaleCurrencySymbol) as! String
+        
+        var formatter = NSNumberFormatter()
+        
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = anyLocale
+        
+        tipLabel.text = formatter.stringFromNumber(tip)
+        totalLabel.text = formatter.stringFromNumber(total)
         
         
+        //tipLabel.text = "$\(tip)"
+        //totalLabel.text = "$\(total)"
+        //tipLabel.text = String(format: "$%.2f", tip)
+        //totalLabel.text = String(format: "$%.2f", total)
         
+        
+            // create a NSLocale-Object
+       /* let anyLocale = NSLocale.currentLocale()
+        
+        var theCurrencySymbol : String = anyLocale.objectForKey(NSLocaleCurrencySymbol) as! String
+            
+        print("\(theCurrencySymbol)") */
+    
     }
     
     override func viewDidDisappear(animated: Bool) {
