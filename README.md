@@ -4,7 +4,7 @@ TipJar is a tip calculator application for iOS.
 
 Submitted by: Shakeeb Majid
 
-Time spent: 5 hours spent in total
+Time spent: 17 hours spent in total
 
 ## User Stories
 
